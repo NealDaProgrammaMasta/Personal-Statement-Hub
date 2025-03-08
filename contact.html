@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Personal Statement Hub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Copy the same styles from index.html */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #0047ab;
+            color: white;
+            padding: 20px 10%;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 5px 0 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #003580;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px 10%;
+        }
+        .contact-form {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        .contact-form button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #0047ab;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #003580;
+        }
+        footer {
+            background-color: #0047ab;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Personal Statement Hub</h1>
+        <p>Your one-stop platform for A-Level and IB personal statement examples</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#examples">Examples</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>
+                Do you have a personal statement you'd like to share? We’d love to hear from you! Submit your personal statement below to inspire and guide future students. Your contribution could make a significant impact on someone’s journey!
+
+            </p>
+            Before sending, please ensure all private details are removed.
+            </p>
+            <div class="contact-form">
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
+
+                    <label for="subject">Subject:</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="economics">Economics</option>
+                        <option value="medicine">Medicine</option>
+                        <option value="engineering">Engineering</option>
+                        <option value="biology">Biology</option>
+                        <option value="business">Business</option>
+                        <option value="computer-science">Computer Science</option>
+                        <option value="english">English</option>
+                        <option value="history">History</option>
+                        <option value="law">Law</option>
+                        <option value="mathematics">Mathematics</option>
+                        <option value="philosophy">Philosophy</option>
+                        <option value="physics">Physics</option>
+                        <option value="psychology">Psychology</option>
+                    </select>
+
+                    <label for="statement">Your Personal Statement:</label>
+                    <textarea id="statement" name="statement" placeholder="Paste your personal statement here..." required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 Personal Statement Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
