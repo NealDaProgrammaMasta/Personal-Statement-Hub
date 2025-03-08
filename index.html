@@ -6,178 +6,123 @@
  <title>Personal Statement Hub</title>
  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
  <style>
- body {
- font-family: Arial, sans-serif;
- margin: 0;
- padding: 0;
- background-color: #f9f9f9;
- color: #333;
- }
- header {
- background-color: #0047ab;
- color: white;
- padding: 20px 10%;
- text-align: center;
- }
- header h1 {
- margin: 0;
- font-size: 2rem;
- }
- header p {
- margin: 5px 0 0;
- }
- nav {
- display: flex;
- justify-content: center;
- background-color: #003580;
- padding: 10px 0;
- }
- nav a {
- color: white;
- text-decoration: none;
- margin: 0 15px;
- font-size: 1rem;
- }
- nav a:hover {
- text-decoration: underline;
- }
- .container {
- padding: 20px 10%;
- }
- .filters {
- display: flex;
- justify-content: center;
- gap: 10px;
- margin-bottom: 20px;
- flex-wrap: wrap;
- }
- .filters button {
- padding: 10px 20px;
- background-color: #0047ab;
- color: white;
- border: none;
- border-radius: 5px;
- cursor: pointer;
- }
- .filters button:hover {
- background-color: #003580;
- }
- .filters button.active {
- background-color: #002366;
- }
- .statement-card {
- background: white;
- border: 1px solid #ddd;
- border-radius: 8px;
- margin-bottom: 20px;
- padding: 15px;
- box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
- }
- .statement-card h2 {
- margin: 0 0 10px;
- font-size: 1.5rem;
- }
- .statement-card p {
- margin: 0 0 15px;
- }
- .btn {
- display: inline-block;
- padding: 10px 20px;
- color: white;
- background-color: #0047ab;
- text-decoration: none;
- border-radius: 5px;
- text-align: center;
- }
- .btn:hover {
- background-color: #003580;
- }
- footer {
- background-color: #0047ab;
- color: white;
- text-align: center;
- padding: 10px 0;
- margin-top: 20px;
- }
- .hidden {
- display: none;
- }
- .collapsible {
- cursor: pointer;
- color: white;
- background-color: #0047ab;
- padding: 10px;
- border-radius: 5px;
- text-align: center;
- font-weight: bold;
- margin: 10px 0;
- transition: background-color 0.3s ease;
- }
- .collapsible:hover {
- background-color: #003580;
- }
- .collapsible::after {
- content: "▼"; /* Down arrow */
- font-size: 0.8rem;
- margin-left: 10px;
- transition: transform 0.3s ease;
- }
- .collapsible.active::after {
- content: "▲"; /* Up arrow */
- }
- .collapsible-content {
- max-height: 0;
- overflow: hidden;
- transition: max-height 0.3s ease-out;
- margin-top: 10px;
- }
- .collapsible-content ul {
- margin: 10px 0 0;
- padding-left: 20px;
- list-style-type: none;
- }
- .collapsible-content ul li {
- padding: 5px 0;
- }
- .contact-form {
- background: white;
- border: 1px solid #ddd;
- border-radius: 8px;
- padding: 20px;
- box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
- }
- .contact-form label {
- display: block;
- margin-bottom: 8px;
- font-weight: bold;
- }
- .contact-form input,
- .contact-form textarea,
- .contact-form select {
- width: 100%;
- padding: 10px;
- margin-bottom: 15px;
- border: 1px solid #ddd;
- border-radius: 5px;
- font-family: Arial, sans-serif;
- }
- .contact-form textarea {
- height: 150px;
- resize: vertical;
- }
- .contact-form button {
- display: inline-block;
- padding: 10px 20px;
- color: white;
- background-color: #0047ab;
- border: none;
- border-radius: 5px;
- cursor: pointer;
- }
- .contact-form button:hover {
- background-color: #003580;
- }
- </style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    }
+    header {
+    background-color: #0047ab;
+    color: white;
+    padding: 20px 10%;
+    text-align: center;
+    }
+    header h1 {
+    margin: 0;
+    font-size: 2rem;
+    }
+    header p {
+    margin: 5px 0 0;
+    }
+    nav {
+    display: flex;
+    justify-content: center;
+    background-color: #003580;
+    padding: 10px 0;
+    }
+    nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+    }
+    nav a:hover {
+    text-decoration: underline;
+    }
+    .container {
+    padding: 20px 10%;
+    }
+    .category-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+    }
+    .category-tags .tag {
+    background-color: #0047ab;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    }
+    .category-tags .tag:hover {
+    background-color: #003580;
+    }
+    .subject-list {
+    display: none; /* Hidden by default */
+    margin: 20px auto; /* Center the list */
+    max-width: 800px; /* Limit the width */
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .subject-list.open {
+    display: block; /* Show when a tag is clicked */
+    }
+    .subject-header {
+    background-color: #0047ab;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.2rem;
+    }
+    .university-slide {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .university-slide h4 {
+    margin: 0 0 10px;
+    color: #0047ab;
+    }
+    .university-slide p {
+    margin: 0 0 15px;
+    color: #333;
+    }
+    .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #0047ab;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    }
+    .btn:hover {
+    background-color: #003580;
+    }
+    footer {
+    background-color: #0047ab;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    }
+    .hidden {
+    display: none;
+    }
+   </style>
 </head>
 <body>
  <header>
@@ -206,102 +151,193 @@
  </ul>
  <p>
  Our mission is to make the university application process less stressful and more successful for students like you. Let’s get started!
-
+ </p>
  <p>
  If you'd like to contribute your personal statement to help inspire and guide future applicants, head over to the <a href="contact.html" style="color: #0047ab; text-decoration: underline;">Contact</a> section!
- </p> </section>
+ </p>
+ </section>
 
  <!-- Examples Section -->
  <section id="examples">
  <h2>Personal Statement Examples</h2>
  <p>
- Below, you’ll find a collection of personal statement examples for a variety of subjects. Use the filters to narrow down your search and find the perfect example for your application.
+ Below, you’ll find a collection of personal statement examples for a variety of subjects. Click on a subject to view examples from different universities.
  </p>
- <!-- Filter Buttons for Statement Type -->
- <div class="filters">
- <button onclick="filterStatementsByType('all')" class="active">All Statements</button>
- <button onclick="filterStatementsByType('legacy')">Old Format</button>
- <button onclick="filterStatementsByType('updated')">New Format (2026 Entry)</button>
+
+ <!-- Category Tags -->
+ <div class="category-tags">
+    <div class="tag" onclick="showSubject('biology')">Biology</div>
+    <div class="tag" onclick="showSubject('business')">Business</div>
+    <div class="tag" onclick="showSubject('chemistry')">Chemistry</div>
+    <div class="tag" onclick="showSubject('computer-science')">Computer Science</div>
+    <div class="tag" onclick="showSubject('economics')">Economics</div>
+    <div class="tag" onclick="showSubject('engineering')">Engineering</div>
+    <div class="tag" onclick="showSubject('english')">English</div>
+    <div class="tag" onclick="showSubject('geography')">Geography</div>
+    <div class="tag" onclick="showSubject('history')">History</div>
+    <div class="tag" onclick="showSubject('law')">Law</div>
+    <div class="tag" onclick="showSubject('mathematics')">Mathematics</div>
+    <div class="tag" onclick="showSubject('medicine')">Medicine</div>
+    <div class="tag" onclick="showSubject('philosophy')">Philosophy</div>
+    <div class="tag" onclick="showSubject('physics')">Physics</div>
+    <div class="tag" onclick="showSubject('politics')">Politics</div>
+    <div class="tag" onclick="showSubject('psychology')">Psychology</div>
+    <div class="tag" onclick="showSubject('sociology')">Sociology</div>
+    <div class="tag" onclick="showSubject('veterinary-science')">Veterinary Science</div>
+   </div>
+ <!-- Add more tags as needed -->
  </div>
- <!-- Filter Buttons for Subjects -->
- <div class="filters">
- <button onclick="filterStatementsBySubject('all')" class="active">All Subjects</button>
- <button onclick="filterStatementsBySubject('art')">Art</button>
- <button onclick="filterStatementsBySubject('biology')">Biology</button>
- <button onclick="filterStatementsBySubject('business')">Business</button>
- <button onclick="filterStatementsBySubject('computer-science')">Computer Science</button>
- <button onclick="filterStatementsBySubject('economics')">Economics</button>
- <button onclick="filterStatementsBySubject('engineering')">Engineering</button>
- <button onclick="filterStatementsBySubject('english')">English</button>
- <button onclick="filterStatementsBySubject('finance-accounting')">Finance & Accounting</button>
- <button onclick="filterStatementsBySubject('history')">History</button>
- <button onclick="filterStatementsBySubject('languages')">Languages</button>
- <button onclick="filterStatementsBySubject('law')">Law</button>
- <button onclick="filterStatementsBySubject('mathematics')">Mathematics</button>
- <button onclick="filterStatementsBySubject('medicine')">Medicine</button>
- <button onclick="filterStatementsBySubject('philosophy')">Philosophy</button>
- <button onclick="filterStatementsBySubject('physics')">Physics</button>
- <button onclick="filterStatementsBySubject('psychology')">Psychology</button>
- </div> 
- <!-- Statement Cards -->
- <div class="statement-card" data-subject="economics" data-type="legacy">
- <h2>Economics - University of Cambridge</h2>
+
+ <!-- Subject Lists -->
+ <div id="economics" class="subject-list">
+ <div class="subject-header">Economics Personal Statements</div>
+ <div class="university-slide">
+ <h4>University of Cambridge</h4>
  <p>A compelling statement showcasing a strong passion for economics and critical thinking skills.</p>
- <a href="economics-statement.html" class="btn">Read More</a>
+ <a href="economics-cambridge.html" class="btn">Read More</a>
  </div>
- <div class="statement-card" data-subject="medicine" data-type="legacy">
- <h2>Medicine - University of Oxford</h2>
- <div class="collapsible" onclick="toggleCollapsible(this)">
- Offers from the following universities
+ <div class="university-slide">
+ <h4>London School of Economics (LSE)</h4>
+ <p>A detailed and analytical statement for aspiring economists.</p>
+ <a href="economics-lse.html" class="btn">Read More</a>
  </div>
- <div class="collapsible-content">
- <ul>
- <li>University of Oxford - ✅</li>
- <li>University College London (UCL) - ✅</li>
- <li>Kings College London (UCL) - ✅</li>
- <li>Cardiff University - ✅</li>
- <li>University of Leicester - ✅</li>
- </ul>
  </div>
- <a href="medicine-statement.html" class="btn">Read More</a>
+
+ <!-- Business - Multiple Universities -->
+<div id="business" class="subject-list">
+    <div class="subject-header">Business Personal Statements</div>
+    <div class="university-slide">
+    <h4>University of Warwick</h4>
+    <p>Business and Computing Personal Statement Example (1A)</p>
+    <a href="business-computing-warwick.html" class="btn">Read More</a>
+    </div>
+    <div class="university-slide">
+    <h4>University of Bath</h4>
+    <p>Business and ICT Personal Statement Example (1B)</p>
+    <a href="business-ict-bath.html" class="btn">Read More</a>
+    </div>
+    <div class="university-slide">
+    <h4>University of Bristol</h4>
+    <p>Business Management Personal Statement Example (1C)</p>
+    <a href="business-management-bristol.html" class="btn">Read More</a>
+    </div>
+    <div class="university-slide">
+    <h4>University of York</h4>
+    <p>Business Management Personal Statement Example (1D)</p>
+    <a href="business-management-york.html" class="btn">Read More</a>
+    </div>
+    <div class="university-slide">
+    <h4>Cardiff University</h4>
+    <p>Business Management Personal Statement Example (1E)</p>
+    <a href="business-management-cardiff.html" class="btn">Read More</a>
+    </div>
+   </div>
+   
+
+<!-- Philosophy - University of Cambridge -->
+<div id="philosophy" class="subject-list">
+    <div class="subject-header">Philosophy Personal Statements</div>
+    <div class="university-slide">
+    <h4>University of Cambridge</h4>
+    <p>Philosophy Personal Statement Example (1A)</p>
+    <a href="philosophy-cambridge.html" class="btn">Read More</a>
+    </div>
+   </div>
+
+<!-- Biology-->
+<div id="biology" class="subject-list">
+    <div class="subject-header">Biology Personal Statements</div>
+    <div class="university-slide">
+        <h4>University of Oxford</h4>
+        <p>Biology Personal Statement Example (1A)</p>
+        <a href="biology-oxford.html" class="btn">Read More</a>
+        </div>
+    <div class="university-slide">
+    <h4>University of Manchester</h4>
+    <p>Biology Personal Statement Example (1B)
+    </p>
+    <a href="biological-sciences-manchester.html" class="btn">Read More</a>
+    </div>
+    <div class="university-slide">
+    <h4>University of Exeter</h4>
+    <p>Biological Sciences Degree Personal Statement Example (1C)</p>
+    <a href="biological-sciences-exeter.html" class="btn">Read More</a>
+    </div>
+    <div class="university-slide">
+    <h4>University of Birmingham</h4>
+    <p>Biology Personal Statement Example (1D)</p>
+    <a href="biology-birmingham.html" class="btn">Read More</a>
+    </div>
+    <div class="university-slide">
+    <h4>University of Bath</h4>
+    <p>Biology Personal Statement Example (1E)</p>
+    <a href="biology-bath.html" class="btn">Read More</a>
+    </div>
+    <div class="university-slide">
+    <h4>University of Warwick</h4>
+    <p>Biology and Psychology Personal Statement Example (1F)</p>
+    <a href="biology-psychology-warwick.html" class="btn">Read More</a>
+    </div>
+    <div class="university-slide">
+    <h4>Durham University</h4>
+    <p>Biology Personal Statement Example (1G)</p>
+    <a href="biology-durham.html" class="btn">Read More</a>
+    </div>
+   </div>
+   
+<!-- Mathematics & Physics - University of Warwick -->
+   <div id="mathematics" class="subject-list">
+    <div class="subject-header">Mathematics Personal Statements</div>
+    <div class="university-slide">
+    <h4>University of Warwick</h4>
+    <p>Mathematics and Physics</p>
+    <a href="mathsphys-statement.html" class="btn">Read More</a>
+    </div>
+    </div>
+
+ <div id="medicine" class="subject-list">
+ <div class="subject-header">Medicine Personal Statements</div>
+ <div class="university-slide">
+ <h4>University of Oxford</h4>
+ <p>A passionate statement for aspiring medical professionals.</p>
+ <a href="medicine-oxford.html" class="btn">Read More</a>
  </div>
- <div class="statement-card" data-subject="mathematics" data-type="legacy">
- <h2>Mathematics & Physics - University of Warwick</h2>
- <div class="collapsible" onclick="toggleCollapsible(this)">
- Offers from the following universities
+ <div class="university-slide">
+ <h4>University College London (UCL)</h4>
+ <p>A well-rounded statement highlighting clinical and academic interests.</p>
+ <a href="medicine-ucl.html" class="btn">Read More</a>
  </div>
- <div class="collapsible-content">
- <ul>
- <li>University of Cambridge - ❌</li>
- <li>University of Warwick - ✅</li>
- <li>University College London (UCL) - ✅</li>
- <li>University of Bristol - ✅</li>
- <li>University of Edinburgh - ✅</li>
- </ul>
  </div>
- <a href="mathsphys-statement.html" class="btn">Read More</a>
- </div> 
- <div class="statement-card" data-subject="engineering" data-type="legacy">
- <h2>Engineering - Imperial College London</h2>
+
+ <div id="engineering" class="subject-list">
+ <div class="subject-header">Engineering Personal Statements</div>
+ <div class="university-slide">
+ <h4>Imperial College London</h4>
  <p>A technically detailed and passionate statement tailored for aspiring engineers.</p>
- <a href="engineering-statement.html" class="btn">Read More</a>
- </div> 
- <div class="statement-card" data-subject="philosophy" data-type="legacy">
- <h2>Philosophy - University of Cambridge</h2>
- <div class="collapsible" onclick="toggleCollapsible(this)">
- Offers from the following universities
+ <a href="engineering-imperial.html" class="btn">Read More</a>
  </div>
- <div class="collapsible-content">
- <ul>
- <li>University of Cambridge - ✅</li>
- <li>UCL - ✅</li>
- <li>University Of Nottingham - ✅</li>
- <li>University of Newcastle - ✅</li>
- <li>University of Edinburgh - ✅</li>
- </ul>
+ <div class="university-slide">
+ <h4>University of Warwick</h4>
+ <p>A creative and innovative statement for engineering enthusiasts.</p>
+ <a href="engineering-warwick.html" class="btn">Read More</a>
  </div>
- <a href="engineering-statement.html" class="btn">Read More</a>
- </div> 
+ </div>
+
+ <div id="computer-science" class="subject-list">
+ <div class="subject-header">Computer Science Personal Statements</div>
+ <div class="university-slide">
+ <h4>University of Cambridge</h4>
+ <p>A logical and innovative statement for aspiring computer scientists.</p>
+ <a href="cs-cambridge.html" class="btn">Read More</a>
+ </div>
+ <div class="university-slide">
+ <h4>Imperial College London</h4>
+ <p>A detailed and technical statement for computer science enthusiasts.</p>
+ <a href="cs-imperial.html" class="btn">Read More</a>
+ </div>
+ </div>
+
+ <!-- Add more subject lists as needed -->
  </section>
  </div>
  <footer>
@@ -309,35 +345,17 @@
  </footer>
 
  <script>
- // Filter function for statement type
- function filterStatementsByType(type) {
- const cards = document.querySelectorAll('.statement-card');
- cards.forEach(card => {
- card.classList.toggle('hidden', type !== 'all' && card.getAttribute('data-type') !== type);
- });
+ // Show Subject List Function
+ function showSubject(subject) {
+ // Hide all subject lists
+ const subjectLists = document.querySelectorAll('.subject-list');
+ subjectLists.forEach(list => list.classList.remove('open'));
 
- document.querySelectorAll('.filters button').forEach(button => {
- button.classList.toggle('active', button.textContent.includes(type) || (type === 'all' && button.textContent.includes('All')));
- });
+ // Show the selected subject list
+ const selectedList = document.getElementById(subject);
+ if (selectedList) {
+ selectedList.classList.add('open');
  }
-
- // Filter function for subject
- function filterStatementsBySubject(subject) {
- const cards = document.querySelectorAll('.statement-card');
- cards.forEach(card => {
- card.classList.toggle('hidden', subject !== 'all' && card.getAttribute('data-subject') !== subject);
- });
-
- document.querySelectorAll('.filters button').forEach(button => {
- button.classList.toggle('active', button.getAttribute('onclick') === `filterStatementsBySubject('${subject}')`);
- });
- }
-
- // Toggle collapsible sections
- function toggleCollapsible(element) {
- element.classList.toggle('active');
- const content = element.nextElementSibling;
- content.style.maxHeight = content.style.maxHeight ? null : `${content.scrollHeight}px`;
  }
  </script>
 </body>
